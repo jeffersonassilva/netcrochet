@@ -1,11 +1,13 @@
 import {Html, Head, Main, NextScript} from 'next/document'
+import {useState} from 'react'
 
 export default function Document() {
+    const [bgColor, setBgColor] = useState('#fbf4ea')
     return (
         <Html lang="pt-BR">
             <Head/>
-            <body className="bg-gradient-to-r from-[#fbf4ea] via-[#f5ede1] to-[#fbf4ea]">
-                <Main/>
+            <body>
+                <Main stateChangeColor={setBgColor}/>
                 <NextScript/>
             </body>
         </Html>
