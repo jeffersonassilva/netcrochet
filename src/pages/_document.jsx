@@ -7,8 +7,10 @@ export default function Document() {
         <Html lang="pt-BR">
             <Head/>
             <body>
-                <Main stateChangeColor={setBgColor}/>
-                <NextScript/>
+                <main className='flex items-center relative min-h-screen'>
+                    <Main stateChangeColor={setBgColor}/>
+                    <NextScript/>
+                </main>
             </body>
         </Html>
     )
