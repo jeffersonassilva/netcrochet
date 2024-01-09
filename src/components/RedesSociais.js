@@ -7,7 +7,8 @@ import {
 const RedesSociais = ({ iconSize, color }) => {
   return (
     <div className="flex gap-3 w-full justify-end items-center">
-      <div className={`text-[${color}] text-sm flex-1`}>Me siga nas redes sociais.</div>
+      <div className={`text-[${color}] text-sm flex-1 hidden md:block md:text-yellow-900`}>&copy; 2024 :: NetCrochet</div>
+      <div className={`text-[${color}] text-sm flex-1 md:flex-none md:text-base`}>Me siga nas redes sociais.</div>
       <a
         href="https://api.whatsapp.com/send/?phone=5561998576920"
         target="_blank"

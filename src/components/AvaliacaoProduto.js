@@ -20,7 +20,7 @@ const AvaliacaoProduto = ({ stars, quantidade }) => {
       <div className="flex">
         {estrelasCompletasIcons} {meiaEstrelaIcon}
       </div>
-      <span className="text-sm text-gray-900">
+      <span className="text-sm text-gray-900 md:text-base">
         {stars} / 5.0 <span className="text-gray-500"></span>
       </span>
     </div>
