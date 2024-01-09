@@ -34,16 +34,10 @@ const Home = () => {
             <div className="text-sm">Necessaires</div>
           </div>
         </Link>
-        <Link href="/produto/bolsa">
+        <Link href="/produto/luva">
           <div class="media-element flex flex-col items-center">
-            <img src={`/img/produtos/bolsa1.webp`} className="aspect-video bg-white p-1 sm:p-2 md:p-3 object-contain border border-[#ecdac9] rounded-md" />
-            <div className="text-sm">Bolsas</div>
-          </div>
-        </Link>
-        <Link href="/produto/necessaire">
-          <div class="media-element flex flex-col items-center">
-            <img src={`/img/produtos/necessaire1.webp`} className="aspect-video bg-white p-1 sm:p-2 md:p-3 object-contain border border-[#ecdac9] rounded-md" />
-            <div className="text-sm">Necessaires</div>
+            <img src={`/img/produtos/luva1.webp`} className="aspect-video bg-white p-1 sm:p-2 md:p-3 object-contain border border-[#ecdac9] rounded-md" />
+            <div className="text-sm">Luvas</div>
           </div>
         </Link>
       </div>
