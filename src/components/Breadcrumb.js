@@ -7,7 +7,7 @@ const Breadcrumb = ({ items }) => {
         <span
           key={index}
           className={`${
-            index === items.length - 1 ? "font-bold" : "font-thin text-gray-500"
+            index === items.length - 1 ? "text-gray-500" : "text-gray-500"
           }`}
         >
           {item}

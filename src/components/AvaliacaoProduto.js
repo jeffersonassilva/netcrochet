@@ -16,7 +16,7 @@ const AvaliacaoProduto = ({ stars, quantidade }) => {
   ) : null;
 
   return (
-    <div className="flex gap-2 items-center">
+    <div className="flex gap-2 items-center mb-4">
       <div className="flex">
         {estrelasCompletasIcons} {meiaEstrelaIcon}
       </div>

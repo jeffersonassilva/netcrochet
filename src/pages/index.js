@@ -5,43 +5,47 @@ const Home = () => {
   return (
     <>
       <Menu />
-      <div className="flex-1 flex justify-center items-center">
-        <div className="p-6">
-          <div className="flex-1">
-            <h1 className="text-4xl md:text-6xl leading-tight text-[#13131e] font-marcellus">
-              Bonito,
-              <br />
-              muito macio,
-              <br />e aconchegante!
-              <br />
-            </h1>
-            <div className="mt-4 font-thin md:text-2xl text-[#13131e]">
-              Todos os nossos produtos são feitos manualmente, podendo ter
-              características personalizadas sob encomenda.
-            </div>
-            <div className="flex gap-4 mt-10">
-              <Link href="/produto/bolsa">
-                <div
-                  className="border border-yellow-900 rounded-md bg-yellow-900
-                   text-white px-6 py-1 hover:bg-yellow-800 transition-all duration-300"
-                >
-                  Bolsa
-                </div>
-              </Link>
-              <Link href="/produto/necessaire">
-                <div
-                  className="border border-yellow-900 rounded-md bg-yellow-900
-                text-white px-6 py-1 hover:bg-yellow-800 transition-all duration-300"
-                >
-                  Necessaire
-                </div>
-              </Link>
-            </div>
+      <div className="flex-1 flex items-center">
+        <div className="p-4 sm:px-6 md:px-8 lg:px-16">
+          <h1 className="text-2xl leading-tight text-[#13131e] sm:text-4xl md:text-5xl">
+            Bonito,
+            <br />
+            muito elegante,
+            <br />e personalizado.
+            <br />
+          </h1>
+          <div className="mt-4 font-thin md:text-2xl text-[#13131e] leading-tight">
+            Todos os produtos são feitos manualmente, podendo ter
+            características personalizadas sob encomenda.
           </div>
-          {/* <div className="flex-1">
-            <h1 className="text-3xl">Cachecol</h1>
-          </div> */}
         </div>
+      </div>
+
+      <div class="grid grid-flow-col gap-2 grid-cols-[40%_40%_40%_40%] lg:grid-cols-[20%_20%_20%_20%] overscroll-contain overflow-x-auto px-4 pb-8 sm:px-6 md:px-8 lg:px-16">
+        <Link href="/produto/bolsa">
+          <div class="media-element flex flex-col items-center">
+            <img src={`/img/produtos/bolsa1.webp`} className="aspect-video bg-white p-1 sm:p-2 md:p-3 object-contain border border-[#ecdac9] rounded-md" />
+            <div className="text-sm">Bolsas</div>
+          </div>
+        </Link>
+        <Link href="/produto/necessaire">
+          <div class="media-element flex flex-col items-center">
+            <img src={`/img/produtos/necessaire1.webp`} className="aspect-video bg-white p-1 sm:p-2 md:p-3 object-contain border border-[#ecdac9] rounded-md" />
+            <div className="text-sm">Necessaires</div>
+          </div>
+        </Link>
+        <Link href="/produto/bolsa">
+          <div class="media-element flex flex-col items-center">
+            <img src={`/img/produtos/bolsa1.webp`} className="aspect-video bg-white p-1 sm:p-2 md:p-3 object-contain border border-[#ecdac9] rounded-md" />
+            <div className="text-sm">Bolsas</div>
+          </div>
+        </Link>
+        <Link href="/produto/necessaire">
+          <div class="media-element flex flex-col items-center">
+            <img src={`/img/produtos/necessaire1.webp`} className="aspect-video bg-white p-1 sm:p-2 md:p-3 object-contain border border-[#ecdac9] rounded-md" />
+            <div className="text-sm">Necessaires</div>
+          </div>
+        </Link>
       </div>
     </>
   );
