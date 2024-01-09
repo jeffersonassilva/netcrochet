@@ -23,8 +23,8 @@ const Produto = ({ data }) => {
   return (
     <>
       <Menu backButton={true} />
-      <div className="flex-1 flex flex-col p-4 sm:px-6 md:px-8 md:pt-8 lg:px-16 lg:gap-x-8 lg:grid lg:grid-cols-[45%_55%] lg:grid-rows-3">
-        <div>
+      <div className="flex-1 flex flex-col p-4 sm:px-6 md:px-8 md:pt-8 lg:px-16 lg:grid lg:grid-cols-[45%_55%]">
+        <div className="lg:pl-8">
           <div className="mb-4 text-sm flex justify-between md:text-base">
             {data.breadcrumb ? (
               <Breadcrumb items={data.breadcrumb} />
@@ -68,7 +68,7 @@ const Produto = ({ data }) => {
 
         <ImagensProduto images={data.images} />
 
-        <div className="md:text-lg">
+        <div className="md:text-lg lg:pl-8">
           <div className="text-gray-500 mb-6">{data.descricao}</div>
           <div className="text-gray-500 mb-6">
             <span className="text-red-500 font-semibold">* </span>
