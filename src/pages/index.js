@@ -7,14 +7,14 @@ const Home = () => {
       <Menu />
       <div className="flex-1 flex items-center">
         <div className="p-4 sm:px-6 md:px-8 lg:px-16">
-          <h1 className="text-2xl leading-tight text-[#13131e] sm:mb-8 sm:text-4xl md:text-5xl lg:text-6xl lg:tracking-tight lg:leading-tight">
-            Bonito,
+          <h1 className="text-2xl leading-tight text-[#13131e] sm:mb-8 sm:text-4xl md:text-5xl lg:text-6xl lg:tracking-tight md:leading-tight lg:leading-tight">
+            Bonito, 
             <br />
             muito elegante,
             <br />e personalizado.
             <br />
           </h1>
-          <div className="mt-4 font-thin text-[#13131e] leading-tight max-w-sm sm:text-xl sm:max-w-lg md:text-2xl md:max-w-xl">
+          <div className="mt-4 font-thin text-[#13131e] leading-tight max-w-sm sm:text-xl sm:max-w-lg md:text-2xl md:max-w-xl md:leading-relaxed">
             Todos os produtos são feitos manualmente, podendo ter
             características personalizadas sob encomenda.
           </div>
