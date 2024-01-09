@@ -23,8 +23,8 @@ const Produto = ({ data }) => {
   return (
     <>
       <Menu backButton={true} />
-      <div className="flex-1 flex flex-col">
-        <div className="p-4 text-sm flex justify-between">
+      <div className="flex-1 flex flex-col p-4 sm:px-6">
+        <div className="mb-4 text-sm flex justify-between">
           {data.breadcrumb ? (
             <Breadcrumb items={data.breadcrumb} />
           ) : (
@@ -38,47 +38,39 @@ const Produto = ({ data }) => {
           </div>
         </div>
 
-        <div className="px-4">
-          <div className="text-2xl font-bold flex items-center justify-between mb-2">
-            {data.nome}
-          </div>
-          <div className="flex justify-between mb-2">
-            <div className="font-bold text-3xl">R${valorSelecionado}</div>
-            <div className="flex gap-2 text-sm justify-center items-center">
-              {data.tamanhos.map((tamanho, index) => (
-                <div
-                  key={index}
-                  className={`flex justify-center items-center w-7 h-7 rounded-full cursor-pointer border border-yellow-500 ${
-                    tamanhoSelecionado.descricao === tamanho.descricao
-                      ? "bg-[#f3d7ab]"
-                      : "bg-transparent"
-                  }`}
-                  onClick={() => alterarTamanho(tamanho)}
-                >
-                  {tamanho.descricao}
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="text-gray-500">
-            <AvaliacaoProduto
-              stars={data.avaliacao}
-              quantidade={data.vendas}
-            ></AvaliacaoProduto>
+        <div className="text-xl font-bold flex items-center justify-between mb-2 tracking-tight">
+          {data.nome}
+        </div>
+        <div className="flex justify-between mb-2">
+          <div className="font-bold text-3xl">R${valorSelecionado}</div>
+          <div className="flex gap-2 text-sm justify-center items-center">
+            {data.tamanhos.map((tamanho, index) => (
+              <div
+                key={index}
+                className={`flex justify-center items-center w-7 h-7 rounded-full cursor-pointer border border-yellow-500 ${
+                  tamanhoSelecionado.descricao === tamanho.descricao
+                    ? "bg-[#f3d7ab]"
+                    : "bg-transparent"
+                }`}
+                onClick={() => alterarTamanho(tamanho)}
+              >
+                {tamanho.descricao}
+              </div>
+            ))}
           </div>
         </div>
+
+        <AvaliacaoProduto stars={data.avaliacao} quantidade={data.vendas}></AvaliacaoProduto>
 
         <ImagensProduto images={data.images} />
 
-        <div className="flex-1 p-4">
-          <div className="text-gray-500 mb-6">{data.descricao}</div>
-          <div className="text-gray-500">
-            <span className="text-red-500 font-semibold">* </span>
-            Entrega estimada em {data.dias_entrega} dias.
-          </div>
+        <div className="text-gray-500 mb-6">{data.descricao}</div>
+        <div className="text-gray-500 mb-6">
+          <span className="text-red-500 font-semibold">* </span>
+          Entrega estimada em {data.dias_entrega} dias.
         </div>
 
-        <div className="p-4 text-gray-500 mb-6">
+        <div className="text-gray-500 mb-2">
           <div>Ficou com dúvidas?</div>
           <div>
             Entre em contato comigo{" "}
@@ -86,20 +78,16 @@ const Produto = ({ data }) => {
               href="https://api.whatsapp.com/send/?phone=5561998576920"
               target="_blank"
               rel="noopener noreferrer"
-              className="font-bold text-black underline-offset-1"
+              className="font-bold text-black underline underline-offset-2"
             >
               clicando aqui
             </a>
             .
           </div>
         </div>
-
-        {/* <div className="flex px-4 py-4 bg-black justify-between">
-          <RedesSociais iconSize={16} />
-          <div className="text-white text-xs">
-            &copy; Todos os direitos reservados.
-          </div>
-        </div> */}
+      </div>
+      <div className="flex p-4 sm:px-6 justify-between border-t border-t-[#ecdac9]">
+        <RedesSociais iconSize={25} color={"#000"} />
       </div>
     </>
   );

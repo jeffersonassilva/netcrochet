@@ -3,7 +3,7 @@ import Produto from "../../components/Produto";
 
 const Necessaire = ({ stateChangeColor, ...props }) => {
   const produto = {
-    nome: "Necessaire",
+    nome: "Necessaire Unissex",
     avaliacao: 4.7,
     dias_entrega: 7,
     descricao:
