@@ -8,23 +8,23 @@ const ImagensProduto = ({ images }) => {
   };
 
   return (
-    <div className="py-4">
+    <div className="mb-4">
       <div
-        className="flex-1 flex items-center justify-center mb-4 mx-4 p-2
+        className="flex-1 flex items-center justify-center mb-4 p-2
       bg-white border-2 border-[#f9ecd8] rounded-sm"
       >
         <img
           src={`/img/produtos/${imagemPrincipal}`}
           alt="Bolsa"
-          className="w-4/5"
+          className="w-10/12"
         />
       </div>
-      <div className="flex gap-2 w-full mx-auto px-4">
+      <div className="grid grid-cols-5 gap-2 mb-4">
         {images.map((image, index) => (
           <div
             key={index}
-            className={`w-[65px] border-2 p-1 bg-white rounded-sm cursor-pointer ${
-              imagemPrincipal === image ? "border-yellow-500" : "border-white"
+            className={`max-w-[120px] border-2 p-1 bg-white rounded-sm cursor-pointer ${
+              imagemPrincipal === image ? "border-[#ecdac9]" : "border-white"
             }`}
             onClick={() => alterarImagemPrincipal(image)}
           >
