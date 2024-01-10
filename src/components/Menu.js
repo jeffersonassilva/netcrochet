@@ -7,7 +7,7 @@ const Menu = ({ backButton }) => {
       className="flex w-full items-center border-b border-b-1 border-b-[#ecdac9] p-4 h-[60px] flex-shrink-0
       sm:flex sm:justify-between sm:items-center sm:px-6
       md:px-8 md:py-6 smd:border-none
-      lg:w-full lg:px-16"
+      lg:w-full lg:px-16 lg:py-10"
     >
       <div className="flex-1 text-yellow-900 sm:text-lg lg:text-2xl font-thin">
         <Link href="/">
