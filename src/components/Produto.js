@@ -23,8 +23,11 @@ const Produto = ({ data }) => {
   return (
     <>
       <Menu backButton={true} />
-      <div className="flex-1 flex flex-col p-4 sm:px-6 md:px-8 md:pt-8 lg:px-16 lg:grid lg:grid-cols-[45%_55%]">
-        <div className="lg:pl-8">
+      <div
+        className="flex-1 flex flex-col p-4 sm:px-6 md:px-8 md:pt-8
+        lg:px-16 lg:grid lg:grid-cols-[42%_58%]"
+      >
+        <div className="lg:pl-12">
           <div className="mb-4 text-sm flex justify-between md:text-base">
             {data.breadcrumb ? (
               <Breadcrumb items={data.breadcrumb} />
@@ -32,8 +35,8 @@ const Produto = ({ data }) => {
               <div>&nbsp;</div>
             )}
             <div className="hidden sm:flex bg-white px-2 rounded-md">
-              <Link href="/" className="flex items-center gap-1">
-                <IoIosArrowRoundBack size={25} className="text-yellow-800" />{" "}
+              <Link href="/" className="flex items-center gap-1 md:text-lg">
+                <IoIosArrowRoundBack className="text-yellow-800 text-2xl md:text-3xl" />{" "}
                 Voltar
               </Link>
             </div>
@@ -43,12 +46,15 @@ const Produto = ({ data }) => {
             {data.nome}
           </div>
           <div className="flex justify-between mb-2">
-            <div className="font-bold text-3xl md:text-4xl">R${valorSelecionado}</div>
+            <div className="font-bold text-3xl md:text-4xl">
+              R${valorSelecionado}
+            </div>
             <div className="flex gap-2 text-sm justify-center items-center md:text-base">
               {data.tamanhos.map((tamanho, index) => (
                 <div
                   key={index}
-                  className={`flex justify-center items-center w-7 h-7 md:w-9 md:h-9 rounded-full cursor-pointer border border-yellow-500 ${
+                  className={`flex justify-center items-center w-7 h-7 rounded-full
+                  cursor-pointer border border-yellow-500 md:w-9 md:h-9 ${
                     tamanhoSelecionado.descricao === tamanho.descricao
                       ? "bg-[#f3d7ab]"
                       : "bg-transparent"
@@ -68,7 +74,7 @@ const Produto = ({ data }) => {
 
         <ImagensProduto images={data.images} />
 
-        <div className="md:text-lg lg:pl-8">
+        <div className="md:text-lg lg:pl-12">
           <div className="text-gray-500 mb-6">{data.descricao}</div>
           <div className="text-gray-500 mb-6">
             <span className="text-red-500 font-semibold">* </span>
