@@ -8,7 +8,7 @@ const Luva = ({ stateChangeColor, ...props }) => {
     dias_entrega: 7,
     descricao:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mattis malesuada quam, quis tincidunt nibh rhoncus ut. Donec commodo fermentum ante sed ullamcorper. Fusce vestibulum ornare nisi id sagittis. Aliquam sagittis tincidunt rutrum.",
-    images: ["luva1.webp", "luva2.webp", "luva3.webp"],
+    images: ["luva1.webp", "luva2.webp", "luva3.webp", "luva4.webp"],
     breadcrumb: ["Moda criativa", "Luvas"],
     tamanhos: [
       { descricao: "P", valor: "20,00" },
