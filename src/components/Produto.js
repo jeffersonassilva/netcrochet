@@ -42,11 +42,14 @@ const Produto = ({ data }) => {
             </div>
           </div>
 
-          <div className="text-xl font-bold flex items-center justify-between mb-2 tracking-tight md:text-3xl">
+          <div
+            className="text-xl font-bold flex items-center justify-between mb-2 tracking-tight
+            md:text-3xl 2xl:text-4xl 2xl:leading-relaxed"
+          >
             {data.nome}
           </div>
           <div className="flex justify-between mb-2">
-            <div className="font-bold text-3xl md:text-4xl">
+            <div className="font-bold text-3xl md:text-4xl 2xl:text-5xl 2xl:leading-relaxed">
               R${valorSelecionado}
             </div>
             <div className="flex gap-2 text-sm justify-center items-center md:text-base">
@@ -74,7 +77,7 @@ const Produto = ({ data }) => {
 
         <ImagensProduto images={data.images} />
 
-        <div className="md:text-lg lg:pl-12">
+        <div className="md:text-lg lg:pl-12 2xl:text-2xl 2xl:leading-relaxed">
           <div className="text-gray-500 mb-6">{data.descricao}</div>
           <div className="text-gray-500 mb-6">
             <span className="text-red-500 font-semibold">* </span>
@@ -98,7 +101,10 @@ const Produto = ({ data }) => {
           </div>
         </div>
       </div>
-      <div className="flex p-4 sm:px-6 md:px-8 lg:px-16 lg:py-6 justify-between border-t border-t-[#ecdac9]">
+      <div
+        className="flex justify-between border-t border-t-[#ecdac9]
+        px-4 sm:px-6 md:px-8 lg:px-16 h-[60px] lg:h-[80px] 2xl:h-[120px]"
+      >
         <RedesSociais iconSize={25} color={"#000"} />
       </div>
     </>
