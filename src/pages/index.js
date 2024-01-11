@@ -1,16 +1,17 @@
+import Carrossel from "../components/Carrossel";
 import Menu from "../components/Menu";
-import Link from "next/link";
 
 const Home = () => {
   return (
     <>
       <Menu />
-      <div className="flex-1 flex items-center">
-        <div className="p-4 sm:px-6 md:px-8 lg:px-16">
+      <div className="grid self-center px-4 sm:px-6 md:px-8 lg:px-16">
+        <div>
           <h1
             className="text-2xl leading-tight text-[#13131e]
             sm:mb-8 sm:text-4xl md:text-5xl md:leading-tight
-            lg:text-6xl lg:tracking-tight lg:leading-tight"
+            lg:text-6xl lg:tracking-tight lg:leading-tight
+            2xl:text-7xl 2xl:tracking-normal 2xl:leading-tight"
           >
             Bonito,
             <br />
@@ -20,46 +21,15 @@ const Home = () => {
           </h1>
           <div
             className="mt-4 font-thin text-[#13131e] leading-tight max-w-sm
-            sm:text-xl sm:max-w-lg md:text-2xl md:max-w-xl md:leading-relaxed"
+            sm:text-xl sm:max-w-lg md:text-2xl md:max-w-xl md:leading-relaxed
+            2xl:text-3xl 2xl:max-w-4xl 2xl:leading-normal"
           >
             Todos os produtos são feitos manualmente, podendo ter
             características personalizadas sob encomenda.
           </div>
         </div>
       </div>
-
-      <div
-        class="grid grid-flow-col gap-2 grid-cols-[40%_40%_40%_40%] overscroll-contain overflow-x-auto px-4 pb-8
-      sm:px-6 md:px-8 lg:px-16 lg:grid-cols-[20%_20%_20%_20%]"
-      >
-        <Link href="/produto/bolsa">
-          <div class="media-element flex flex-col items-center">
-            <img
-              src={`/img/produtos/bolsa1.webp`}
-              className="aspect-video bg-white p-1 object-contain border border-[#ecdac9] rounded-md sm:p-2 md:p-3 "
-            />
-            <div className="text-sm">Bolsas</div>
-          </div>
-        </Link>
-        <Link href="/produto/necessaire">
-          <div class="media-element flex flex-col items-center">
-            <img
-              src={`/img/produtos/necessaire1.webp`}
-              className="aspect-video bg-white p-1 object-contain border border-[#ecdac9] rounded-md sm:p-2 md:p-3"
-            />
-            <div className="text-sm">Necessaires</div>
-          </div>
-        </Link>
-        <Link href="/produto/luva">
-          <div class="media-element flex flex-col items-center">
-            <img
-              src={`/img/produtos/luva1.webp`}
-              className="aspect-video bg-white p-1 object-contain border border-[#ecdac9] rounded-md sm:p-2 md:p-3"
-            />
-            <div className="text-sm">Luvas</div>
-          </div>
-        </Link>
-      </div>
+      <Carrossel />
     </>
   );
 };

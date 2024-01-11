@@ -9,14 +9,26 @@
 
 html,
 body {
-  box-sizing: border-box;
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
   font-family: "Marcellus", sans-serif;
 }
 
 * {
-  box-sizing: border-box
+  box-sizing: border-box;
+}
+
+#__next {
+  @apply grid grid-rows-[60px_1fr] sm:grid-rows-[60px_1fr] lg:grid-rows-[80px_1fr] 2xl:grid-rows-[120px_1fr];
+  /* @apply grid grid-rows-[60px_1fr_140px] sm:grid-rows-[60px_1fr_260px]; */
+  /* lg:grid-rows-[80px_1fr_240px]
+  display: grid;
+  grid-template-rows: 100px 1fr 100px; */
+  box-sizing: border-box;
+  width: 100vw;
+  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 .font-ubuntu {
@@ -25,14 +37,6 @@ body {
 
 p {
   @apply indent-6 sm:indent-10 first-letter:text-lg sm:first-letter:text-2xl leading-7 sm:leading-8 md:leading-9;
-}
-
-#__next {
-  @apply flex flex-col;
-  box-sizing: border-box;
-  width: 100vw;
-  min-height: 100vh;
-  min-height: 100dvh;
 }
 
 .media-element {

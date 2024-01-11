@@ -7,7 +7,7 @@ export default function Document() {
     <Html lang="pt-BR">
       <Head />
       <body>
-        <main className="flex">
+        <main className="flex max-w-screen-2xl mx-auto">
           <Main stateChangeColor={setBgColor} />
           <NextScript />
         </main>
